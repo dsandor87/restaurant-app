@@ -1,16 +1,25 @@
-import { Fragment } from "react";
-import Lottie from "react-lottie";
+import { Fragment, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
+
+import { UserContext } from "../../contexts/user.context";
+
+import { signOutUser } from "../../utils/firebase/firebase.utils";
 import animationData from "../../assets/little_cottage_.json";
 
 import "./navigation.styles.scss";
+import Lottie from "react-lottie";
 
 const Navigation = () => {
+  const { currentUser, setCurrentUser } = useContext(UserContext);
   const defaultOptions = {
     loop: false,
     autoplay: true,
     animationData: animationData,
     rendererSettings: {},
+  };
+  const signOutHandler = async () => {
+    await signOutUser();
+    setCurrentUser(null);
   };
 
   return (
@@ -29,9 +38,17 @@ const Navigation = () => {
           <Link className="nav-link" to="/menu">
             MENU
           </Link>
-          <Link className="nav-link" to="/auth">
-            SIGN IN
-          </Link>
+
+          {currentUser ? (
+            <span className="nav-link" onClick={signOutHandler}>
+              {" "}
+              SIGN OUT{" "}
+            </span>
+          ) : (
+            <Link className="nav-link" to="/auth">
+              SIGN IN
+            </Link>
+          )}
         </div>
       </div>
       <Outlet />

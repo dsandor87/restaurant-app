@@ -16,3 +16,12 @@ body {
   font-family: "Light";
   src: local("Palatino"), url("./font/palatino.ttf") format("truetype");
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -3,23 +3,19 @@ import { Outlet, Link } from "react-router-dom";
 
 import { UserContext } from "../../contexts/user.context";
 
-import { signOutUser } from "../../utils/firebase/firebase.utils";
 import animationData from "../../assets/little_cottage_.json";
+import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 import "./navigation.styles.scss";
 import Lottie from "react-lottie";
 
 const Navigation = () => {
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { currentUser } = useContext(UserContext);
   const defaultOptions = {
     loop: false,
     autoplay: true,
     animationData: animationData,
     rendererSettings: {},
-  };
-  const signOutHandler = async () => {
-    await signOutUser();
-    setCurrentUser(null);
   };
 
   return (
@@ -40,7 +36,7 @@ const Navigation = () => {
           </Link>
 
           {currentUser ? (
-            <span className="nav-link" onClick={signOutHandler}>
+            <span className="nav-link" onClick={signOutUser}>
               {" "}
               SIGN OUT{" "}
             </span>

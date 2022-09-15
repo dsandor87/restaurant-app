@@ -2,13 +2,11 @@ import { Route, Routes } from "react-router-dom";
 import "./font/palatino.ttf";
 import Home from "./routes/home/home.component";
 import Navigation from "./routes/navigation/navigation.component";
+import SignIn from "./routes/sign-in/sign-in.component";
 const Shop = () => {
   return <h1>I am the shop page</h1>;
 };
 
-const SignIn = () => {
-  return <h1>I am the sign-in</h1>;
-};
 const App = () => {
   return (
     <Routes>

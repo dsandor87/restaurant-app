@@ -11,6 +11,44 @@ https://dulcet-crumble-b36832.netlify.app/
 
 ---
 
+## Overvire
+
+Develop a website or mobile app with menu and online ordering functionality. This should be set up to store the current order status in a database with the view to using a third-party shopping cart API. We are currently investigating shopping cart options to partner on so the design for this should be left open for now. Providing the database stores the information for now, the API will be included in phase two and does not need to be completed as part of this version. A logged in user should be able to add and remove menu items to their order and store this, this will be enough for individual businesses to take this forward in the future
+
+
+## Functional Requirements
+
+### Essential Features:
+- Fully navigable or application with ability to move through different sections from all pages
+- Login functionality to recognise user account
+- Menu items should be clickable to add items to order
+- Ability to order between 1 and 5 of each item
+- Each item ordered should be added to current order page
+- Current order page should include a running sub-total
+- Ability to edit the order from the Current order page at any time, including changing the quantity of any item ordered, or removing items from the order
+- The Book Table page should include a form to book table on specific dates. The backend logic for this does not have to be included but the UI design needs to be flexible so it can be adapted for many different restaurants
+
+### Non-essential (nice to have) features:
+
+- Ideally a stock keeping system would run on the backend to inform users when items are not available when they try to order more than what is available. This should be tested in the backend to ensure the database is updated in real-time and after each order is completed
+- Another nice to have feature would be to link the table booking functionality to the database
+- Secure Admin functionality to update the stock keeping and table booking system would benefit more businesses
+
+## User Interface Requirements
+
+- Design should be responsive for a range of mobile devices.
+- Must follow the defined colour scheme outlined in the ‘Government Apps Supporting Resources’ folder along with black #000000 and white #ffffff as required.
+- Font type: Palatino
+- Must use a version of the logo included in the supporting resources folder
+- Must include clear navigation between different sections
+- Must include the following screens and navigation structure:
+o Home page
+o Menu
+▪ Ordering functionality
+o Current Order
+o Book Table
+o Contact Us
+
 ## Timeframe
 
 5 days
@@ -36,7 +74,6 @@ https://dulcet-crumble-b36832.netlify.app/
 
 ---
 
-### Overview
 
 ##### Synoptic project - Multivers
 

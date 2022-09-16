@@ -1,4 +1,4 @@
-!['Sign-Up-Flow'](https://i.ibb.co/NyxHHNF/menu.png)
+!['Home Page'](https://raw.githubusercontent.com/dsandor87/restaurant-app/main/landing.png)
 
 Deployed project here:
 https://dulcet-crumble-b36832.netlify.app/

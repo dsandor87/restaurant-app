@@ -1,14 +1,52 @@
-import CategoryItem from "../category-item/category-item.component";
+import DirectoryItem from "../directory-item/directory-item.component";
 
-import "./directory.styles.scss";
+import { DirectoryContainer } from "./directory.styles";
 
-const Directory = ({ categories }) => {
+const categories = [
+  {
+    id: 1,
+    title: "starters & appetisers",
+    imageUrl:
+      "https://images-gmi-pmc.edge-generalmills.com/fca4b25f-5859-4048-974c-4ef02a0014ee.jpg",
+    route: "menu/starters & appetisers",
+  },
+  {
+    id: 2,
+    title: "soups",
+    imageUrl:
+      "https://hellosubscription.com/wp-content/uploads/2021/01/image_5ff45b34dfa20.png?quality=100",
+    route: "menu/soups",
+  },
+  {
+    id: 3,
+    title: "main",
+    imageUrl:
+      "https://i.swncdn.com/media/800w/cms/CW/28282-thanksgiving-meal-feast-dinner.1200w.tn.webp",
+    route: "menu/main",
+  },
+  {
+    id: 4,
+    title: "salads",
+    imageUrl:
+      "https://www.gatherandfeast.com/sites/gatherandfeast/files/styles/slider/public/images/posts/01-nectarine-roasted-walnut-salad-title.jpg?itok=Bu0UbiPO",
+    route: "menu/salads",
+  },
+  {
+    id: 5,
+    title: "desserts",
+    imageUrl:
+      "https://www.choice.com.au/-/media/e9d5085fe5bd4af48eb25b77b647fc63.ashx",
+    route: "menu/desserts",
+  },
+];
+
+const Directory = () => {
   return (
-    <div className="directory-container">
+    <DirectoryContainer>
       {categories.map((category) => (
-        <CategoryItem key={category.id} category={category} />
+        <DirectoryItem key={category.id} category={category} />
       ))}
-    </div>
+    </DirectoryContainer>
   );
 };
 

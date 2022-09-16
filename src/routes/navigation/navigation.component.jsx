@@ -42,10 +42,8 @@ const Navigation = () => {
         </LogoContainer>
         <NavLinks>
           <NavLink to="/menu">MENU</NavLink>
-          {currentUser ? (
-            <NavLink to="/reservations">RESEVATIONS</NavLink>
-          ) : null}
-          <NavLink to="/contact-us">CONTACT US</NavLink>
+
+          <NavLink to="/reservations">RESEVATIONS & CONTACT</NavLink>
 
           {currentUser ? (
             <NavLink as="span" onClick={signOutUser}>

@@ -5,6 +5,7 @@ import { CartContext } from "../../contexts/cart.context";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 
 import "./checkout.styles.scss";
+import Button from "../../components/button/button.component";
 
 const Checkout = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
@@ -32,6 +33,19 @@ const Checkout = () => {
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <div className="total">TOTAL: £{cartTotal}</div>
+
+      <div className="buttons-container">
+        <Button
+          type="submit"
+          onClick={() =>
+            cartTotal === 0
+              ? alert("Your Cart is empty add some item please")
+              : alert(`Payment accepted : You paid £${cartTotal} Thank you :) `)
+          }
+        >
+          Pay
+        </Button>
+      </div>
     </div>
   );
 };

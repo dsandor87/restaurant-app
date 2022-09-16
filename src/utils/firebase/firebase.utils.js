@@ -1,12 +1,11 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
+  signInWithRedirect,
   signInWithPopup,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signInWithRedirect,
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
@@ -14,23 +13,22 @@ import {
   getFirestore,
   doc,
   getDoc,
+  getDocs,
   setDoc,
-  writeBatch,
   collection,
+  writeBatch,
+  query,
 } from "firebase/firestore";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAAMdq02mVJqMiQS9SpTVgKnQtSX7-1URc",
-  authDomain: "restaurant-app-81005.firebaseapp.com",
-  projectId: "restaurant-app-81005",
-  storageBucket: "restaurant-app-81005.appspot.com",
-  messagingSenderId: "586452633230",
-  appId: "1:586452633230:web:c30985acde5a3b4011abdf",
+  apiKey: "AIzaSyCkm314-NNTv7uJbrJ-6gMg_DjKgchanMw",
+  authDomain: "fir-95c6a.firebaseapp.com",
+  projectId: "fir-95c6a",
+  storageBucket: "fir-95c6a.appspot.com",
+  messagingSenderId: "1003517870079",
+  appId: "1:1003517870079:web:1403fac54cff6afe9531ca",
 };
+
 const firebaseApp = initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
@@ -46,7 +44,6 @@ export const signInWithGoogleRedirect = () =>
   signInWithRedirect(auth, googleProvider);
 
 export const db = getFirestore();
-
 export const addCollectionAndDocuments = async (
   collectionKey,
   objectsToAdd
@@ -61,6 +58,20 @@ export const addCollectionAndDocuments = async (
 
   await batch.commit();
   console.log("done");
+};
+
+export const getCategoriesAndDocuments = async () => {
+  const collectionRef = collection(db, "categories");
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const { title, items } = docSnapshot.data();
+    acc[title.toLowerCase()] = items;
+    return acc;
+  }, {});
+
+  return categoryMap;
 };
 
 export const createUserDocumentFromAuth = async (

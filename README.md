@@ -1,4 +1,3 @@
-!['HomePage'](https://github.com/dsandor87/restaurant-app/blob/master/landing.png)
 
 Deployed project here:
 https://dulcet-crumble-b36832.netlify.app/
@@ -86,7 +85,6 @@ Cloud Functions. Is another integration of the existing Google product into Fire
 
 #### Sign-Up / Sign-In:
 
-!['Sign-Up-Flow'](https://i.ibb.co/NTscz3k/login.png)
 
 Up in the right hand corner of the screen there is a sign in link, which redirects to the register page. Once the user has entered in a username, email, password and password confirmation, or using google sign in the user will be redisign in and rederected to the menu
 
@@ -95,7 +93,6 @@ Up in the right hand corner of the screen there is a sign in link, which redirec
 ### Home Page:
 
 The homepage is divided into 2 sections: the main hero,the main menu categories, navigation bar.
-!['Sign-Up-Flow'](https://i.ibb.co/WBnZdsV/landing.png)
 
 ---
 
@@ -103,7 +100,6 @@ The homepage is divided into 2 sections: the main hero,the main menu categories,
 
 ###### Menu page
 
-!['Sign-Up-Flow'](https://i.ibb.co/NyxHHNF/menu.png)
 
 ---
 

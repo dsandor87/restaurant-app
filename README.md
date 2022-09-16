@@ -1,4 +1,4 @@
-!['HomePage'](https://raw.githubusercontent.com/dsandor87/restaurant-app/main/landing.png)
+!['HomePage'](https://github.com/dsandor87/restaurant-app/blob/master/landing.png)
 
 Deployed project here:
 https://dulcet-crumble-b36832.netlify.app/

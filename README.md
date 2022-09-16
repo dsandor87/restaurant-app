@@ -77,7 +77,7 @@ o Contact Us
 
 # Synoptic project - Multivers
 
-## Little Cottage restaurant-app is s a online food order sytem you can make bookings order food and pay
+## Little Cottage restaurant-app is an online food order sytem you can make bookings order food and pay
 
 ---
 

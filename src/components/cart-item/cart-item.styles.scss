@@ -5,7 +5,11 @@
   margin-bottom: 15px;
 
   img {
-    width: 30%;
+    width: 40%;
+  }
+
+  .price {
+    font-size: 12px;
   }
 
   .item-details {
@@ -17,7 +21,7 @@
     padding: 10px 20px;
 
     .name {
-      font-size: 16px;
+      font-size: 12px;
     }
   }
 }

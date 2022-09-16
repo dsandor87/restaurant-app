@@ -75,11 +75,9 @@ o Contact Us
 ---
 
 
-##### Synoptic project - Multivers
+# Synoptic project - Multivers
 
----
-
-###### Little Cottage restaurant-app is s a online food order sytem you can make bookings order food and pay
+## Little Cottage restaurant-app is s a online food order sytem you can make bookings order food and pay
 
 ---
 
@@ -127,24 +125,11 @@ Up in the right hand corner of the screen there is a sign in link, which redirec
 
 ---
 
-### Home Page:
 
-The homepage is divided into 2 sections: the main hero,the main menu categories, navigation bar.
-
----
-
-### Menu Page:
-
-###### Menu page
-
-
----
-
----
 
 ### Process:
 
-Once Ive got the specofication of the project I started to sketch and try to turn to html structure how I would like to the page look like
+Once Ive got the specofication of the project I started to sketch and try to turn to react components structure how I would like to the page look like
 
 ### Phase 1
 
@@ -252,37 +237,37 @@ image of the wireframe
 
 ## I added the images
 
-### Phase 2
+## Phase 2
 
-## Navbar and Routing
+### Navbar and Routing
 
 React Router uses dynamic routing to ensure that routing is achieved as it is requested by the user. This also means that all the required components are also rendered without any flashes of white screen or page reload.
 
 I read the documentation and I start implimenting it.
 
-### Phase 3
+## Phase 3
 
-## Authentication
+### Authentication
 
 I used the Firebase authentication system easy to work with and has offer many options that you see in a real world
 
-### Phase 4:
+## Phase 4:
 
 Introduce Context Api to better state managment.
 
-### Phase 5:
+## Phase 5:
 
 Build the menu page and cart functionality
 
-### Phase 6:
+## Phase 6:
 
 Upload the menu data to fire datastore
 
-### Phase 6:
+## Phase 7:
 
 Introducing styled component to sort clashing scss style problems
 
-### Phase 7:
+### Phase 8:
 
 Deploy the project on Netlify
 
